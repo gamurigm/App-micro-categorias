@@ -1,0 +1,5 @@
+com\ejemplo\categorias\repository\CategoriaRepository.class
+com\ejemplo\categorias\controller\CategoriaController.class
+com\ejemplo\categorias\service\CategoriaService.class
+com\ejemplo\categorias\CategoriasApplication.class
+com\ejemplo\categorias\model\Categoria.class

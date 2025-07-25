@@ -1,3 +1,15 @@
+## Subir imagen a Docker Hub (resumen rápido)
+
+```sh
+# 1. Inicia sesión en Docker Hub (solo la primera vez)
+docker login
+
+# 2. Construye la imagen (si no la tienes ya)
+docker build -t ryuzakizeitan/categorias:tagname .
+
+# 3. Sube la imagen al repositorio de Docker Hub
+docker push ryuzakizeitan/categorias:tagname
+```
 # API REST de Categorías
 
 Este proyecto es una API REST desarrollada en Java con Spring Boot 3 (JDK 17) para gestionar un catálogo de categorías, persistiendo datos en MySQL y ejecutándose completamente en contenedores Docker.
@@ -24,7 +36,7 @@ mvn clean package
 
 ### 2. Construir la imagen Docker
 ```sh
-docker build -t tuusuario/categorias-app:latest .
+docker build -t ryuzakizeitan/categorias:latest .
 ```
 
 ### 3. Probar localmente con Docker Compose
@@ -38,13 +50,16 @@ La API estará disponible en http://localhost:8089/api/categorias
    ```sh
    docker login
    ```
-2. Etiqueta la imagen (si no lo hiciste en el build):
+
+2. (Opcional) Etiqueta la imagen con un tag personalizado:
    ```sh
-   docker tag categorias-app tuusuario/categorias-app:latest
+   docker tag ryuzakizeitan/categorias:latest ryuzakizeitan/categorias:tagname
    ```
 3. Sube la imagen:
    ```sh
-   docker push tuusuario/categorias-app:latest
+   docker push ryuzakizeitan/categorias:latest
+   # O con un tag personalizado
+   docker push ryuzakizeitan/categorias:tagname
    ```
 
 ### 5. Comandos útiles
@@ -66,7 +81,7 @@ La API estará disponible en http://localhost:8089/api/categorias
   ```
 
 ### Repositorio de Docker Hub
-https://hub.docker.com/repository/docker/tuusuario/categorias-app
+https://hub.docker.com/r/ryuzakizeitan/categorias
 
 ## Modelo de datos
 - id: Long (autogenerado, PK)

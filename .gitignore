@@ -1,0 +1,52 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+/.idea/
+*.iml
+*.ipr
+*.iws
+/.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+/logs/
+*.log
+
+# Docker
+*.pid
+db_data/
+.env
+
+# Others
+*.swp
+*.swo
+
+# Node
+node_modules/
+
+# Test
+/test-output/
+
+# Misc
+*.bak
+*.tmp
+
+# Ignore build output
+/build/
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore generated files
+/generated/

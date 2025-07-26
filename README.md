@@ -218,3 +218,12 @@ curl -X DELETE http://localhost:8089/api/categorias/1
 - descripcion: String (opcional, máx 255)
 - fechaCreacion: LocalDateTime (asignada automáticamente)
 - base de datos: `test` 🗄️
+
+---
+
+## 🐬 Comando para correr MySQL 8 en Docker
+
+Para iniciar un contenedor de MySQL 8 manualmente:
+```sh
+docker run --name api-categorias -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=test -p 3306:3306 -d mysql:8.0
+```
